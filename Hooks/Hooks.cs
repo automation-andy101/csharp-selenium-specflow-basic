@@ -109,23 +109,23 @@ namespace SpecFlowEA.Hooks
 
                 if (stepType == "Given")
                 {
-                    //_scenario.CreateNode<Given>(stepName).Fail(scenarioContext.TestError.Message,
-                    //    MediaEntityBuilder.CreateScreenCaptureFromPath(addScreenshot(driver, scenarioContext)).Build());
+                    _scenario.CreateNode<Given>(stepName).Fail(scenarioContext.TestError.Message,
+                        MediaEntityBuilder.CreateScreenCaptureFromPath(addScreenshot(driver, scenarioContext)).Build());
                 }
                 else if (stepType == "When")
                 {
-                    //_scenario.CreateNode<When>(stepName).Fail(scenarioContext.TestError.Message,
-                    //    MediaEntityBuilder.CreateScreenCaptureFromPath(addScreenshot(driver, scenarioContext)).Build());
+                    _scenario.CreateNode<When>(stepName).Fail(scenarioContext.TestError.Message,
+                        MediaEntityBuilder.CreateScreenCaptureFromPath(addScreenshot(driver, scenarioContext)).Build());
                 }
                 else if (stepType == "Then")
                 {
-                    //_scenario.CreateNode<Then>(stepName).Fail(scenarioContext.TestError.Message,
-                    //    MediaEntityBuilder.CreateScreenCaptureFromPath(addScreenshot(driver, scenarioContext)).Build());
+                    _scenario.CreateNode<Then>(stepName).Fail(scenarioContext.TestError.Message,
+                        MediaEntityBuilder.CreateScreenCaptureFromPath(addScreenshot(driver, scenarioContext)).Build());
                 }
                 else if (stepType == "And")
                 {
-                    //_scenario.CreateNode<And>(stepName).Fail(scenarioContext.TestError.Message,
-                    //    MediaEntityBuilder.CreateScreenCaptureFromPath(addScreenshot(driver, scenarioContext)).Build());
+                    _scenario.CreateNode<And>(stepName).Fail(scenarioContext.TestError.Message,
+                        MediaEntityBuilder.CreateScreenCaptureFromPath(addScreenshot(driver, scenarioContext)).Build());
                 }
             }
         }

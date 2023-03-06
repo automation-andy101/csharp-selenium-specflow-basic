@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium;
 
 namespace SpecFlowEA.Utilities
 {
@@ -36,6 +37,18 @@ namespace SpecFlowEA.Utilities
         public static void ExtentReportTearDown()
         {
             _extentReports.Flush();
+        }
+
+        public string addScreenshot(IWebDriver driver, ScenarioContext scenarioContext)
+        {
+            ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
+            Screenshot screenshot = takesScreenshot.GetScreenshot();
+
+            string screenshotLocation = Path.Combine(testResultPath, scenarioContext.ScenarioInfo.Title + ".png");
+            screenshot.SaveAsFile(screenshotLocation, ScreenshotImageFormat.Png);
+
+
+            return screenshotLocation;
         }
 
     }
