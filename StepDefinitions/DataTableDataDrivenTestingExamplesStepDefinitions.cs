@@ -24,6 +24,7 @@ namespace SpecFlowEA.StepDefinitions
             {
                 driver.FindElement(By.XPath("//*[@name='search_query']")).Clear();
                 driver.FindElement(By.XPath("//*[@name='search_query']")).SendKeys(keyword.searchKey);
+                driver.FindElement(By.XPath("//*[@name='search_query']")).SendKeys(Keys.Enter);
             }
         }
 
@@ -32,6 +33,6 @@ namespace SpecFlowEA.StepDefinitions
 
     public class SearchKeyTestData
     {
-        public string searchKey{ get; set; }
+        public string searchKey { get; set; }
     }
 }
